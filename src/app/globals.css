@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+:root {
+  --background: #07111f;
+  --foreground: #eff5ff;
+  --muted: #b4c2d8;
+  --panel: rgba(8, 18, 34, 0.8);
+  --panel-border: rgba(255, 255, 255, 0.1);
+  --hero-glow: radial-gradient(circle at top, rgba(251, 191, 36, 0.2), transparent 38%);
+  --font-sans:
+    "Aptos", "Segoe UI", "Trebuchet MS", "Gill Sans", "Helvetica Neue",
+    sans-serif;
+  --font-display:
+    "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Times New Roman",
+    serif;
+  --font-mono: "Consolas", "SFMono-Regular", "Courier New", monospace;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background:
+    linear-gradient(180deg, #07111f 0%, #081628 32%, #0c1d31 58%, #102744 100%);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  min-width: 320px;
+}
+
+h1,
+h2,
+h3,
+summary {
+  font-family: var(--font-display);
+}
+
+a,
+button,
+details,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(251, 191, 36, 0.28);
+  color: white;
+}
+
+.glass-panel {
+  background: rgba(9, 20, 37, 0.68);
+  border: 1px solid var(--panel-border);
+  box-shadow: 0 20px 80px rgba(4, 12, 24, 0.35);
+}
+
+.brand-lockup {
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.brand-lockup:hover {
+  transform: translateY(-1px);
+}
+
+.brand-mark {
+  background:
+    radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.55), transparent 24%),
+    radial-gradient(circle at center, rgba(251, 191, 36, 0.28), rgba(251, 191, 36, 0.08) 55%, transparent 72%),
+    linear-gradient(180deg, rgba(255, 248, 220, 0.14), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(251, 191, 36, 0.32);
+  box-shadow:
+    0 0 0 6px rgba(251, 191, 36, 0.05),
+    0 10px 30px rgba(2, 6, 23, 0.35);
+  color: #fff5cf;
+}
+
+.sunrise-panel {
+  background:
+    radial-gradient(circle at top left, rgba(251, 191, 36, 0.17), transparent 34%),
+    radial-gradient(circle at 90% 20%, rgba(125, 211, 252, 0.12), transparent 24%),
+    linear-gradient(180deg, rgba(13, 29, 51, 0.95), rgba(9, 20, 37, 0.94));
+}
+
+.hero-glow {
+  background: var(--hero-glow);
+  filter: blur(20px);
+}
+
+.stars {
+  background-image:
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.55) 0, transparent 0.1rem),
+    radial-gradient(circle at 88% 14%, rgba(255, 255, 255, 0.4) 0, transparent 0.11rem),
+    radial-gradient(circle at 35% 32%, rgba(255, 255, 255, 0.38) 0, transparent 0.1rem),
+    radial-gradient(circle at 74% 34%, rgba(255, 255, 255, 0.45) 0, transparent 0.09rem),
+    radial-gradient(circle at 18% 52%, rgba(255, 255, 255, 0.28) 0, transparent 0.08rem),
+    radial-gradient(circle at 91% 62%, rgba(255, 255, 255, 0.3) 0, transparent 0.08rem);
+  background-repeat: repeat;
+  background-size: 28rem 28rem;
+}
+
+.section-shell {
+  margin: 0 auto;
+  max-width: 80rem;
+  padding: 1.5rem 1.5rem 4.5rem;
+}
+
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(180deg, rgba(16, 31, 54, 0.88), rgba(10, 20, 36, 0.84));
+  border-radius: 1.75rem;
+  padding: 1.7rem;
+  box-shadow: 0 24px 70px rgba(4, 12, 24, 0.28);
+}
+
+@media (min-width: 640px) {
+  .section-shell {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-shell {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
