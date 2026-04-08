@@ -32,8 +32,8 @@ export default function Home() {
                 *
               </span>
               <span>
-                <span className="block text-lg font-semibold uppercase tracking-[0.36em] text-amber-100">
-                  Morning Star
+                <span className="block text-lg font-semibold uppercase tracking-[0.28em] text-amber-100">
+                  Morning Star Ledger Co.
                 </span>
                 <span className="text-[0.95rem] text-slate-300">{siteIdentity.businessTagline}</span>
               </span>
